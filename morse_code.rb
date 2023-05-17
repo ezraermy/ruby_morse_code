@@ -11,3 +11,14 @@ def decode_char(morse_code)
 
   morse_code_dict[morse_code]
 end
+
+def decode_word(morse_word)
+  decoded_word = ""
+  morse_chars = morse_word.split(" ")
+
+  morse_chars.each do |morse_char|
+    decoded_word += decode_char(morse_char)
+  end
+
+  return decoded_word
+end
